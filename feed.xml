@@ -5,18 +5,18 @@
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
     <description>Personal podcast feed.</description>
-    <lastBuildDate>Fri, 05 Jun 2026 21:35:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 21:40:47 +0000</lastBuildDate>
     <itunes:author>Bruno Montibeller</itunes:author>
     <itunes:summary>Personal podcast feed.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Technology"/>
-    <itunes:image href="https://b14r.github.io/podcasts/cover.jpg"/>
+    <itunes:image href="https://b14r.github.io/podcasts/cover.png"/>
     <itunes:owner>
       <itunes:name>Bruno Montibeller</itunes:name>
       <itunes:email>5417892+b14r@users.noreply.github.com</itunes:email>
     </itunes:owner>
     <image>
-      <url>https://b14r.github.io/podcasts/cover.jpg</url>
+      <url>https://b14r.github.io/podcasts/cover.png</url>
       <title>My Podcast</title>
       <link>https://b14r.github.io/podcasts</link>
     </image>
@@ -24,14 +24,14 @@
       <title>The Last Stand of Japan s Christians</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_Last_Stand_of_Japan_s_Christians.m4a" length="7320101" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_Last_Stand_of_Japan_s_Christians.m4a</guid>
-      <pubDate>Fri, 05 Jun 2026 21:35:07 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 21:36:38 +0000</pubDate>
       <itunes:duration>14:28</itunes:duration>
     </item>
     <item>
       <title>The Bloody 1527 Sack of Rome</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
-      <pubDate>Fri, 05 Jun 2026 21:34:20 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 21:29:08 +0000</pubDate>
       <itunes:duration>42:24</itunes:duration>
     </item>
   </channel>
