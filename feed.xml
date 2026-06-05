@@ -5,7 +5,7 @@
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
     <description>Personal podcast feed.</description>
-    <lastBuildDate>Fri, 05 Jun 2026 21:23:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 21:28:25 +0000</lastBuildDate>
     <itunes:author>Bruno Montibeller</itunes:author>
     <itunes:summary>Personal podcast feed.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -21,10 +21,10 @@
       <link>https://b14r.github.io/podcasts</link>
     </image>
     <item>
-      <title>The_Bloody_1527_Sack_of_Rome</title>
-      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="81888594" type="audio/x-m4a"/>
+      <title>The Bloody 1527 Sack of Rome</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
-      <pubDate>Fri, 05 Jun 2026 21:22:53 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 21:28:25 +0000</pubDate>
       <itunes:duration>42:24</itunes:duration>
     </item>
   </channel>
