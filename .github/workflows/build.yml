@@ -1,0 +1,44 @@
+name: Build podcast feed
+
+# Runs when episodes or config change. Compresses new audio (once),
+# rebuilds feed.xml, and commits the result back.
+# Commits made with GITHUB_TOKEN do NOT retrigger this workflow, so no loop.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'episodes/**'
+      - 'config.json'
+      - 'generate.py'
+      - 'compress.py'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Compress new episodes
+        run: python3 compress.py
+
+      - name: Rebuild feed
+        run: python3 generate.py
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto: compress audio + rebuild feed"
+            git push
+          fi

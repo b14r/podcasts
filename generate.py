@@ -61,7 +61,7 @@ def gather_episodes(cfg):
         pub = datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc)
         dur = ffprobe_duration(f)
         eps.append({
-            "title": meta.get("title", f.stem),
+            "title": meta.get("title", f.stem.replace("_", " ").strip()),
             "description": meta.get("description", ""),
             "url": f"{cfg['base_url']}/episodes/{f.name}",
             "length": stat.st_size,
