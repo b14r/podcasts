@@ -1,11 +1,11 @@
 {
   "base_url": "https://b14r.github.io/podcasts",
-  "title": "My Podcast",
+  "title": "Faith & Fire",
   "author": "Bruno Montibeller",
   "email": "5417892+b14r@users.noreply.github.com",
-  "description": "Personal podcast feed.",
+  "description": "Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.",
   "language": "en-us",
-  "category": "Technology",
+  "category": "History",
   "explicit": false,
   "cover": "cover.png",
   "compress_bitrate": "64k"

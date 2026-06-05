@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>My Podcast</title>
+    <title>Faith &amp; Fire</title>
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
-    <description>Personal podcast feed.</description>
-    <lastBuildDate>Fri, 05 Jun 2026 21:41:25 +0000</lastBuildDate>
+    <description>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</description>
+    <lastBuildDate>Fri, 05 Jun 2026 21:47:09 +0000</lastBuildDate>
     <itunes:author>Bruno Montibeller</itunes:author>
-    <itunes:summary>Personal podcast feed.</itunes:summary>
+    <itunes:summary>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
-    <itunes:category text="Technology"/>
+    <itunes:category text="History"/>
     <itunes:image href="https://b14r.github.io/podcasts/cover.png"/>
     <itunes:owner>
       <itunes:name>Bruno Montibeller</itunes:name>
@@ -17,22 +17,22 @@
     </itunes:owner>
     <image>
       <url>https://b14r.github.io/podcasts/cover.png</url>
-      <title>My Podcast</title>
+      <title>Faith &amp; Fire</title>
       <link>https://b14r.github.io/podcasts</link>
     </image>
-    <item>
-      <title>The Bloody 1527 Sack of Rome</title>
-      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
-      <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
-      <pubDate>Fri, 05 Jun 2026 21:41:00 +0000</pubDate>
-      <itunes:duration>42:24</itunes:duration>
-    </item>
     <item>
       <title>The Last Stand of Japan s Christians</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_Last_Stand_of_Japan_s_Christians.m4a" length="7320101" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_Last_Stand_of_Japan_s_Christians.m4a</guid>
-      <pubDate>Fri, 05 Jun 2026 21:41:00 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 21:36:38 +0000</pubDate>
       <itunes:duration>14:28</itunes:duration>
+    </item>
+    <item>
+      <title>The Bloody 1527 Sack of Rome</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
+      <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
+      <pubDate>Fri, 05 Jun 2026 21:29:08 +0000</pubDate>
+      <itunes:duration>42:24</itunes:duration>
     </item>
   </channel>
 </rss>
