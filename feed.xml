@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>My Podcast</title>
+    <link>https://b14r.github.io/podcasts</link>
+    <language>en-us</language>
+    <description>Personal podcast feed.</description>
+    <lastBuildDate>Fri, 05 Jun 2026 21:07:33 +0000</lastBuildDate>
+    <itunes:author>Bruno Montibeller</itunes:author>
+    <itunes:summary>Personal podcast feed.</itunes:summary>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Technology"/>
+    <itunes:image href="https://b14r.github.io/podcasts/cover.jpg"/>
+    <itunes:owner>
+      <itunes:name>Bruno Montibeller</itunes:name>
+      <itunes:email>5417892+b14r@users.noreply.github.com</itunes:email>
+    </itunes:owner>
+    <image>
+      <url>https://b14r.github.io/podcasts/cover.jpg</url>
+      <title>My Podcast</title>
+      <link>https://b14r.github.io/podcasts</link>
+    </image>
+
+  </channel>
+</rss>

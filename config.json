@@ -1,0 +1,11 @@
+{
+  "base_url": "https://b14r.github.io/podcasts",
+  "title": "My Podcast",
+  "author": "Bruno Montibeller",
+  "email": "5417892+b14r@users.noreply.github.com",
+  "description": "Personal podcast feed.",
+  "language": "en-us",
+  "category": "Technology",
+  "explicit": false,
+  "cover": "cover.jpg"
+}
