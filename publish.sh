@@ -24,8 +24,12 @@ git add -A
 git commit -q -m "$msg"
 
 echo "==> Pushing..."
-git pull -q --rebase --autostash origin master || true
-git push -q origin master
+# feed.xml is generated; on conflict always prefer our freshly-built copy.
+for attempt in 1 2 3; do
+  git push -q origin master 2>/dev/null && break
+  echo "   remote moved, rebasing (attempt $attempt)..."
+  git pull -q --rebase -X ours --autostash origin master 2>&1 | tail -1 || true
+done
 
 echo "==> Done. Feed: $(python3 -c "import json;print(json.load(open('config.json'))['base_url']+'/feed.xml')")"
 echo "    Live in ~1 min."
