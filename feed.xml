@@ -5,7 +5,7 @@
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
     <description>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</description>
-    <lastBuildDate>Sat, 06 Jun 2026 17:25:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 17:20:25 +0000</lastBuildDate>
     <itunes:author>Faith &amp; Fire</itunes:author>
     <itunes:summary>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -21,32 +21,39 @@
       <link>https://b14r.github.io/podcasts</link>
     </image>
     <item>
+      <title>The Winged Hussars Save Vienna, 1683</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Winged_Hussars_Save_Vienna_1683.m4a" length="11596612" type="audio/x-m4a"/>
+      <guid isPermaLink="false">The_Winged_Hussars_Save_Vienna_1683.m4a</guid>
+      <pubDate>Sat, 06 Jun 2026 16:22:42 +0000</pubDate>
+      <itunes:duration>22:55</itunes:duration>
+    </item>
+    <item>
       <title>The Great Siege of Malta, 1565</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_1565_Great_Siege_of_Malta.m4a" length="25103743" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_1565_Great_Siege_of_Malta.m4a</guid>
-      <pubDate>Sat, 06 Jun 2026 17:25:00 +0000</pubDate>
+      <pubDate>Sat, 06 Jun 2026 07:22:22 +0000</pubDate>
       <itunes:duration>49:36</itunes:duration>
     </item>
     <item>
-      <title>The Sack of Rome, 1527</title>
-      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
-      <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
-      <pubDate>Sat, 06 Jun 2026 17:25:00 +0000</pubDate>
-      <itunes:duration>42:24</itunes:duration>
+      <title>The First Crusade: From Clermont to Jerusalem, 1096</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_First_Crusade_from_Clermont_to_Jerusalem_ 1096.m4a" length="23101897" type="audio/x-m4a"/>
+      <guid isPermaLink="false">The_First_Crusade_from_Clermont_to_Jerusalem_ 1096.m4a</guid>
+      <pubDate>Mon, 15 Jun 2026 17:20:25 +0000</pubDate>
+      <itunes:duration>45:41</itunes:duration>
     </item>
     <item>
       <title>The Last Stand of Japanese Christians</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_Last_Stand_of_Japan_s_Christians.m4a" length="7320101" type="audio/x-m4a"/>
       <guid isPermaLink="false">The_Last_Stand_of_Japan_s_Christians.m4a</guid>
-      <pubDate>Sat, 06 Jun 2026 17:25:00 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 21:36:38 +0000</pubDate>
       <itunes:duration>14:28</itunes:duration>
     </item>
     <item>
-      <title>The Winged Hussars Save Vienna, 1683</title>
-      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Winged_Hussars_Save_Vienna_1683.m4a" length="11596612" type="audio/x-m4a"/>
-      <guid isPermaLink="false">The_Winged_Hussars_Save_Vienna_1683.m4a</guid>
-      <pubDate>Sat, 06 Jun 2026 17:25:00 +0000</pubDate>
-      <itunes:duration>22:55</itunes:duration>
+      <title>The Sack of Rome, 1527</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.m4a" length="21448677" type="audio/x-m4a"/>
+      <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
+      <pubDate>Fri, 05 Jun 2026 21:29:08 +0000</pubDate>
+      <itunes:duration>42:24</itunes:duration>
     </item>
   </channel>
 </rss>
