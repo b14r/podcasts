@@ -31,6 +31,27 @@ def load_config():
     return cfg
 
 
+def git_added_date(path):
+    """Date the file was first committed (stable across machines/checkouts).
+
+    File mtimes are NOT preserved by git, so they're useless for ordering in CI.
+    The original add-commit date is deterministic everywhere. Returns None for
+    files not yet committed (brand-new episodes) -> caller falls back to mtime.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "--diff-filter=A", "--format=%aI", "--", str(path)],
+            capture_output=True, text=True, cwd=ROOT,
+        )
+        lines = [l for l in out.stdout.splitlines() if l.strip()]
+        if not lines:
+            return None
+        # last line = the original add commit (oldest)
+        return datetime.fromisoformat(lines[-1])
+    except (ValueError, OSError, subprocess.SubprocessError):
+        return None
+
+
 def ffprobe_duration(path):
     """Return duration in seconds, or None if ffprobe unavailable."""
     try:
@@ -58,7 +79,7 @@ def gather_episodes(cfg):
         sidecar = f.with_suffix(".json")
         if sidecar.exists():
             meta = json.loads(sidecar.read_text())
-        pub = datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc)
+        pub = git_added_date(f) or datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc)
         dur = ffprobe_duration(f)
         eps.append({
             "title": meta.get("title", f.stem.replace("_", " ").strip()),
@@ -66,11 +87,12 @@ def gather_episodes(cfg):
             "url": f"{cfg['base_url']}/episodes/{f.name}",
             "length": stat.st_size,
             "guid": f.name,
+            "_pub": pub,
             "pubDate": format_datetime(pub),
             "duration": fmt_duration(dur) if dur else None,
         })
-    # newest first
-    eps.sort(key=lambda e: e["pubDate"], reverse=True)
+    # newest first (sort by datetime, NOT the RFC-822 string)
+    eps.sort(key=lambda e: e["_pub"], reverse=True)
     return eps
 
 
