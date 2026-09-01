@@ -10,13 +10,13 @@
     <itunes:summary>Sieges, crusades, and martyrs — the bloodiest collisions of faith and power in history, and the people caught in between.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="History"/>
-    <itunes:image href="https://b14r.github.io/podcasts/cover.jpg"/>
+    <itunes:image href="https://b14r.github.io/podcasts/cover.jpg?v=461fc8f8"/>
     <itunes:owner>
       <itunes:name>Battles of Christendom</itunes:name>
       <itunes:email>faithandfirepod@pm.me</itunes:email>
     </itunes:owner>
     <image>
-      <url>https://b14r.github.io/podcasts/cover.jpg</url>
+      <url>https://b14r.github.io/podcasts/cover.jpg?v=461fc8f8</url>
       <title>Battles of Christendom</title>
       <link>https://b14r.github.io/podcasts</link>
     </image>
@@ -26,7 +26,7 @@
       <guid isPermaLink="false">The_Leper_King_Who_Defied_Saladin.m4a</guid>
       <pubDate>Tue, 01 Sep 2026 08:28:27 +0100</pubDate>
       <itunes:duration>41:17</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Leper_King_Who_Defied_Saladin.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Leper_King_Who_Defied_Saladin.jpg?v=23674c30"/>
     </item>
     <item>
       <title>The First Crusade: From Clermont to Jerusalem, 1096</title>
@@ -34,7 +34,7 @@
       <guid isPermaLink="false">The_First_Crusade_from_Clermont_to_Jerusalem_1096.m4a</guid>
       <pubDate>Mon, 15 Jun 2026 18:39:31 +0100</pubDate>
       <itunes:duration>45:41</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_First_Crusade_from_Clermont_to_Jerusalem_1096.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_First_Crusade_from_Clermont_to_Jerusalem_1096.jpg?v=24e130c7"/>
     </item>
     <item>
       <title>The Winged Hussars Save Vienna, 1683</title>
@@ -42,7 +42,7 @@
       <guid isPermaLink="false">The_Winged_Hussars_Save_Vienna_1683.m4a</guid>
       <pubDate>Sat, 06 Jun 2026 17:22:42 +0100</pubDate>
       <itunes:duration>22:55</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Winged_Hussars_Save_Vienna_1683.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Winged_Hussars_Save_Vienna_1683.jpg?v=b4e1d5de"/>
     </item>
     <item>
       <title>The Great Siege of Malta, 1565</title>
@@ -50,7 +50,7 @@
       <guid isPermaLink="false">The_1565_Great_Siege_of_Malta.m4a</guid>
       <pubDate>Sat, 06 Jun 2026 08:19:53 +0100</pubDate>
       <itunes:duration>49:36</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_1565_Great_Siege_of_Malta.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_1565_Great_Siege_of_Malta.jpg?v=3d56efad"/>
     </item>
     <item>
       <title>The Shimabara Rebellion, 1638</title>
@@ -58,7 +58,7 @@
       <guid isPermaLink="false">The_Last_Stand_of_Japan_s_Christians.m4a</guid>
       <pubDate>Fri, 05 Jun 2026 22:29:38 +0100</pubDate>
       <itunes:duration>14:28</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Last_Stand_of_Japan_s_Christians.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Last_Stand_of_Japan_s_Christians.jpg?v=35d87f91"/>
     </item>
     <item>
       <title>The Sack of Rome, 1527</title>
@@ -66,7 +66,7 @@
       <guid isPermaLink="false">The_Bloody_1527_Sack_of_Rome.m4a</guid>
       <pubDate>Fri, 05 Jun 2026 22:23:45 +0100</pubDate>
       <itunes:duration>42:24</itunes:duration>
-      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.jpg"/>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/The_Bloody_1527_Sack_of_Rome.jpg?v=5a284ac0"/>
     </item>
   </channel>
 </rss>

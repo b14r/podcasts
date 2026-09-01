@@ -13,6 +13,7 @@ notes, create a sidecar .json next to the audio file, e.g.:
 Per-episode artwork: episodes/001-intro.jpg (see episode_art.py) is emitted
 as <itunes:image> on the item when present.
 """
+import hashlib
 import json
 import os
 import subprocess
@@ -55,6 +56,13 @@ def git_added_date(path):
         return None
 
 
+def img_url(cfg, rel_path):
+    """URL for an image with a content-hash query so apps refetch when it changes."""
+    p = ROOT / rel_path
+    h = hashlib.sha1(p.read_bytes()).hexdigest()[:8] if p.exists() else "0"
+    return f"{cfg['base_url']}/{rel_path}?v={h}"
+
+
 def ffprobe_duration(path):
     """Return duration in seconds, or None if ffprobe unavailable."""
     try:
@@ -86,7 +94,7 @@ def gather_episodes(cfg):
         dur = ffprobe_duration(f)
         img = f.with_suffix(".jpg")
         eps.append({
-            "image": f"{cfg['base_url']}/episodes/{img.name}" if img.exists() else None,
+            "image": img_url(cfg, f"episodes/{img.name}") if img.exists() else None,
             "title": meta.get("title", f.stem.replace("_", " ").strip()),
             "description": meta.get("description", ""),
             "url": f"{cfg['base_url']}/episodes/{f.name}",
@@ -104,7 +112,7 @@ def gather_episodes(cfg):
 def build_feed(cfg, eps):
     e = escape
     explicit = "true" if cfg.get("explicit") else "false"
-    cover = f"{cfg['base_url']}/{cfg.get('cover', 'cover.jpg')}"
+    cover = img_url(cfg, cfg.get('cover', 'cover.jpg'))
     now = format_datetime(datetime.now(timezone.utc))
 
     items = []

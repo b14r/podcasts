@@ -52,14 +52,14 @@ TEMPLATE = """<!DOCTYPE html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 <style>
 html,body{{margin:0;width:{S}px;height:{S}px;overflow:hidden;background:#000}}
-.cross{{position:absolute;left:50%;top:430px;transform:translateX(-50%)}}
-.rule{{position:absolute;left:50%;transform:translateX(-50%);width:1300px;height:5px;background:#fff}}
-.r1{{top:800px}}.r2{{top:2200px}}
-.title{{position:absolute;left:250px;width:2500px;top:900px;height:1200px;display:flex;align-items:center;justify-content:center;
-  text-align:center;font-family:'UnifrakturMaguntia',serif;color:#fff;line-height:1.05;font-size:420px;text-wrap:balance}}
-.show{{position:absolute;left:0;right:0;top:2330px;text-align:center;font-family:'UnifrakturMaguntia',serif;font-size:170px;color:#fff;opacity:.9}}
+.cross{{position:absolute;left:50%;top:300px;transform:translateX(-50%)}}
+.rule{{position:absolute;left:50%;transform:translateX(-50%);width:1500px;height:10px;background:#fff}}
+.r1{{top:760px}}.r2{{top:2260px}}
+.title{{position:absolute;left:150px;width:2700px;top:830px;height:1370px;display:flex;align-items:center;justify-content:center;
+  text-align:center;font-family:'UnifrakturMaguntia',serif;color:#fff;line-height:1.02;font-size:560px;text-wrap:balance}}
+.show{{position:absolute;left:0;right:0;top:2380px;text-align:center;font-family:'UnifrakturMaguntia',serif;font-size:210px;color:#fff}}
 </style></head><body>
-<svg class="cross" width="320" height="320" viewBox="-110 -110 220 220" fill="#fff">{CROSS}</svg>
+<svg class="cross" width="420" height="420" viewBox="-110 -110 220 220" fill="#fff">{CROSS}</svg>
 <div class="rule r1"></div>
 <div class="title"><div id="t">{TITLE}</div></div>
 <div class="rule r2"></div>
@@ -67,7 +67,7 @@ html,body{{margin:0;width:{S}px;height:{S}px;overflow:hidden;background:#000}}
 <script>
 document.fonts.ready.then(()=>{{
   const box=document.querySelector('.title'), t=document.getElementById('t');
-  let fs=420;
+  let fs=560;
   while(fs>120 && (t.scrollHeight>box.clientHeight || t.scrollWidth>box.clientWidth)){{fs-=10; box.style.fontSize=fs+'px';}}
   document.title='ready';
 }});
