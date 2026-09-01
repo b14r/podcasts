@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>Faith &amp; Fire</title>
+    <title>Battles of Christendom</title>
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
     <description>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</description>
@@ -12,12 +12,12 @@
     <itunes:category text="History"/>
     <itunes:image href="https://b14r.github.io/podcasts/cover.jpg"/>
     <itunes:owner>
-      <itunes:name>Faith &amp; Fire</itunes:name>
+      <itunes:name>Battles of Christendom</itunes:name>
       <itunes:email>faithandfirepod@pm.me</itunes:email>
     </itunes:owner>
     <image>
       <url>https://b14r.github.io/podcasts/cover.jpg</url>
-      <title>Faith &amp; Fire</title>
+      <title>Battles of Christendom</title>
       <link>https://b14r.github.io/podcasts</link>
     </image>
     <item>
