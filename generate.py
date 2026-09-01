@@ -9,6 +9,9 @@ notes, create a sidecar .json next to the audio file, e.g.:
 
     episodes/001-intro.m4a
     episodes/001-intro.json   ->  {"title": "Intro", "description": "..."}
+
+Per-episode artwork: episodes/001-intro.jpg (see episode_art.py) is emitted
+as <itunes:image> on the item when present.
 """
 import json
 import os
@@ -81,7 +84,9 @@ def gather_episodes(cfg):
             meta = json.loads(sidecar.read_text())
         pub = git_added_date(f) or datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc)
         dur = ffprobe_duration(f)
+        img = f.with_suffix(".jpg")
         eps.append({
+            "image": f"{cfg['base_url']}/episodes/{img.name}" if img.exists() else None,
             "title": meta.get("title", f.stem.replace("_", " ").strip()),
             "description": meta.get("description", ""),
             "url": f"{cfg['base_url']}/episodes/{f.name}",
@@ -106,11 +111,12 @@ def build_feed(cfg, eps):
     for ep in eps:
         dur = f'\n      <itunes:duration>{ep["duration"]}</itunes:duration>' if ep["duration"] else ""
         desc = f"\n      <description>{e(ep['description'])}</description>" if ep["description"] else ""
+        img = f'\n      <itunes:image href="{e(ep["image"])}"/>' if ep["image"] else ""
         items.append(f"""    <item>
       <title>{e(ep['title'])}</title>{desc}
       <enclosure url="{e(ep['url'])}" length="{ep['length']}" type="audio/x-m4a"/>
       <guid isPermaLink="false">{e(ep['guid'])}</guid>
-      <pubDate>{ep['pubDate']}</pubDate>{dur}
+      <pubDate>{ep['pubDate']}</pubDate>{dur}{img}
     </item>""")
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>

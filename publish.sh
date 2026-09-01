@@ -11,6 +11,9 @@ cd "$(dirname "$0")"
 echo "==> Compressing new episodes..."
 python3 compress.py
 
+echo "==> Rendering episode artwork..."
+python3 episode_art.py
+
 echo "==> Rebuilding feed..."
 python3 generate.py
 

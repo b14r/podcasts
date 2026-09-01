@@ -15,14 +15,14 @@ Static podcast feed on GitHub Pages. `./publish.sh "msg"` = compress new audio �
 - Text color: white `#fff`. No gradients, no gold, no textures. Thin white rules (5px at 3000px canvas) frame the title.
 - Show cover: row of five crosses on top (Templar pattée, Maltese, Jerusalem, Latin, Lorraine), rule, "Battles of" / "Christendom", rule, tagline "SIEGES · CRUSADES · MARTYRS".
 
-## Per-episode artwork (spec)
+## Per-episode artwork
 
-Every episode gets its own square image, same design language as the show cover:
+`episode_art.py` renders `episodes/<Name>.jpg` for any episode missing one (runs inside `publish.sh`; `--force` re-renders all). Pick the cross with `"cross": "maltese"` etc. in the sidecar. `generate.py` emits `<itunes:image>` per item when the jpg exists. Design:
 
 1. Black background.
 2. A Christian symbol on top — a cross, ideally one that fits the episode (Maltese for Hospitallers/Malta, Jerusalem for the Crusader kingdom, pattée for Templars, Latin as default).
 3. Episode title, big, in UnifrakturMaguntia, white, centered. Long titles wrap; scale font down to fit.
 4. Podcast name "Battles of Christendom" at the bottom, smaller, same blackletter (or Cinzel caps).
-5. Output: `episodes/<Name>.jpg`, 3000×3000 (min 1400), RGB, < 500 KB. `generate.py` should emit `<itunes:image href>` per `<item>` when the jpg exists.
+5. Output: `episodes/<Name>.jpg`, 3000×3000, RGB, ~400 KB.
 
 Keep it very simple — no illustrations, no borders beyond thin rules.
