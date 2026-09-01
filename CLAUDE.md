@@ -26,3 +26,20 @@ Static podcast feed on GitHub Pages. `./publish.sh "msg"` = compress new audio �
 5. Output: `episodes/<Name>.jpg`, 3000×3000, RGB, ~400 KB.
 
 Keep it very simple — no illustrations, no borders beyond thin rules.
+
+## Content plan
+
+- **First Crusade 4-part series** (overview episode was deleted; these replace it). Filenames/titles, all `"cross": "lorraine"`:
+  1. `The_First_Crusade_I_Clermont_1095.mp3` → "The First Crusade I: Clermont & the People's Crusade, 1096"
+  2. `The_First_Crusade_II_Dorylaeum_1097.mp3` → "The First Crusade II: Nicaea & Dorylaeum, 1097"
+  3. `The_First_Crusade_III_Antioch_1098.mp3` → "The First Crusade III: The Siege of Antioch, 1098"
+  4. `The_First_Crusade_IV_Jerusalem_1099.mp3` → "The First Crusade IV: The Fall of Jerusalem, 1099"
+- Episode queue after that: Lepanto 1571 → Belgrade 1456 → Las Navas de Tolosa 1212 → Tours 732 → Aljubarrota 1385. Prefer victories; avoid stacking defeats (user request). Hattin 1187 reserved as tragic lead-in to a Third Crusade series.
+- Title format: "battle name, year" (e.g. "The Great Siege of Malta, 1565").
+- Deleted episodes (recoverable from git history at `77ea00e`): First Crusade overview, Shimabara Rebellion.
+
+## Distribution
+
+- Live on Apple Podcasts + Spotify (auto-refresh from feed). YouTube: RSS ingestion pending user ID verification → Studio → Create → New podcast → Submit RSS feed. MP3-only pipeline exists because YouTube rejects M4A.
+- Apple transcripts: rely on Apple's auto-transcription (user choice; no podcast:transcript tag).
+- Header/background colors in apps are auto-derived from cover art — not settable.
