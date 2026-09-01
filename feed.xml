@@ -5,7 +5,7 @@
     <link>https://b14r.github.io/podcasts</link>
     <language>en-us</language>
     <description>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</description>
-    <lastBuildDate>Mon, 15 Jun 2026 17:42:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 07:28:27 +0000</lastBuildDate>
     <itunes:author>Faith &amp; Fire</itunes:author>
     <itunes:summary>Stories from history's bloodiest collisions of faith and power — sieges, martyrs, holy wars, and the people caught in between.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -20,6 +20,13 @@
       <title>Faith &amp; Fire</title>
       <link>https://b14r.github.io/podcasts</link>
     </image>
+    <item>
+      <title>The Leper King Who Defied Saladin</title>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/The_Leper_King_Who_Defied_Saladin.m4a" length="20901598" type="audio/x-m4a"/>
+      <guid isPermaLink="false">The_Leper_King_Who_Defied_Saladin.m4a</guid>
+      <pubDate>Tue, 01 Sep 2026 07:28:25 +0000</pubDate>
+      <itunes:duration>41:17</itunes:duration>
+    </item>
     <item>
       <title>The First Crusade: From Clermont to Jerusalem, 1096</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/The_First_Crusade_from_Clermont_to_Jerusalem_1096.m4a" length="23101897" type="audio/x-m4a"/>
