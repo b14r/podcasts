@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render per-episode artwork: episodes/<Name>.jpg for every episodes/<Name>.m4a.
+"""Render per-episode artwork: episodes/<Name>.jpg for every episodes/<Name>.mp3.
 
 Design (see CLAUDE.md): black background, a cross on top, the episode title big
 in UnifrakturMaguntia, the podcast name small at the bottom. 3000x3000 JPG.
@@ -108,7 +108,7 @@ def main():
         return
     show = json.loads((ROOT / "config.json").read_text())["title"]
     done = 0
-    for f in sorted(EP_DIR.glob("*.m4a")):
+    for f in sorted(EP_DIR.glob("*.mp3")):
         jpg = f.with_suffix(".jpg")
         if jpg.exists() and not force:
             continue

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan episodes/ for .m4a files and build feed.xml (a podcast RSS feed).
+"""Scan episodes/ for .mp3 files and build feed.xml (a podcast RSS feed).
 
 Usage: python3 generate.py
 Edit config.json first (set base_url to your GitHub Pages URL).
@@ -7,7 +7,7 @@ Edit config.json first (set base_url to your GitHub Pages URL).
 Per-episode metadata is optional. To override the auto-generated title or add
 notes, create a sidecar .json next to the audio file, e.g.:
 
-    episodes/001-intro.m4a
+    episodes/001-intro.mp3
     episodes/001-intro.json   ->  {"title": "Intro", "description": "..."}
 
 Per-episode artwork: episodes/001-intro.jpg (see episode_art.py) is emitted
@@ -36,24 +36,27 @@ def load_config():
 
 
 def git_added_date(path):
-    """Date the file was first committed (stable across machines/checkouts).
+    """Date the episode was first committed (stable across machines/checkouts).
 
     File mtimes are NOT preserved by git, so they're useless for ordering in CI.
     The original add-commit date is deterministic everywhere. Returns None for
     files not yet committed (brand-new episodes) -> caller falls back to mtime.
+    Episodes were .m4a before the MP3 switch, so the legacy path is checked too
+    and the oldest date wins.
     """
-    try:
-        out = subprocess.run(
-            ["git", "log", "--diff-filter=A", "--format=%aI", "--", str(path)],
-            capture_output=True, text=True, cwd=ROOT,
-        )
-        lines = [l for l in out.stdout.splitlines() if l.strip()]
-        if not lines:
-            return None
-        # last line = the original add commit (oldest)
-        return datetime.fromisoformat(lines[-1])
-    except (ValueError, OSError, subprocess.SubprocessError):
-        return None
+    dates = []
+    for p in (path, path.with_suffix(".m4a")):
+        try:
+            out = subprocess.run(
+                ["git", "log", "--diff-filter=A", "--format=%aI", "--", str(p)],
+                capture_output=True, text=True, cwd=ROOT,
+            )
+            lines = [l for l in out.stdout.splitlines() if l.strip()]
+            if lines:
+                dates.append(datetime.fromisoformat(lines[-1]))  # last = original add
+        except (ValueError, OSError, subprocess.SubprocessError):
+            pass
+    return min(dates) if dates else None
 
 
 def img_url(cfg, rel_path):
@@ -84,7 +87,7 @@ def fmt_duration(secs):
 
 def gather_episodes(cfg):
     eps = []
-    for f in sorted(EP_DIR.glob("*.m4a")):
+    for f in sorted(EP_DIR.glob("*.mp3")):
         stat = f.stat()
         meta = {}
         sidecar = f.with_suffix(".json")
@@ -99,7 +102,7 @@ def gather_episodes(cfg):
             "description": meta.get("description", ""),
             "url": f"{cfg['base_url']}/episodes/{f.name}",
             "length": stat.st_size,
-            "guid": f.name,
+            "guid": f.stem,
             "_pub": pub,
             "pubDate": format_datetime(pub),
             "duration": fmt_duration(dur) if dur else None,
@@ -122,7 +125,7 @@ def build_feed(cfg, eps):
         img = f'\n      <itunes:image href="{e(ep["image"])}"/>' if ep["image"] else ""
         items.append(f"""    <item>
       <title>{e(ep['title'])}</title>{desc}
-      <enclosure url="{e(ep['url'])}" length="{ep['length']}" type="audio/x-m4a"/>
+      <enclosure url="{e(ep['url'])}" length="{ep['length']}" type="audio/mpeg"/>
       <guid isPermaLink="false">{e(ep['guid'])}</guid>
       <pubDate>{ep['pubDate']}</pubDate>{dur}{img}
     </item>""")
@@ -163,7 +166,7 @@ def main():
     (ROOT / "feed.xml").write_text(feed)
     print(f"Wrote feed.xml with {len(eps)} episode(s).")
     if not eps:
-        print("Drop .m4a files into episodes/ then run again.")
+        print("Drop audio files into episodes/ then run again.")
 
 
 if __name__ == "__main__":

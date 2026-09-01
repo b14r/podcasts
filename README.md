@@ -13,22 +13,22 @@ Self-hosted podcast feed served as static files from GitHub Pages.
 
 ## Add an episode
 
-1. Copy your `.m4a` file into `episodes/`. Name it sortably, e.g.
-   `001-intro.m4a`. The filename (without extension) becomes the title.
+1. Copy your audio (`.m4a`, `.wav` or `.mp3`) into `episodes/`. It is converted
+   to a 96k MP3 on publish (YouTube RSS ingestion only accepts MP3). The
+   filename (without extension) becomes the title.
 2. *(Optional)* Override metadata with a sidecar JSON of the same name:
    ```json
    // episodes/001-intro.json
    { "title": "Intro", "description": "First episode." }
    ```
-3. Rebuild and publish:
+3. Publish:
    ```sh
-   python3 generate.py
-   git add -A && git commit -m "Add episode" && git push
+   ./publish.sh "Add episode: Title"
    ```
 
 ## Notes
 
-- `pubDate` comes from each file's modified time. Newest shows first.
+- `pubDate` comes from the file's first git commit date. Newest shows first.
 - Episode **duration** tags are added automatically if `ffprobe`
   (from ffmpeg) is installed; otherwise skipped (apps still work).
 - No dependencies — pure Python 3 stdlib.

@@ -2,8 +2,8 @@
 
 Static podcast feed on GitHub Pages. `./publish.sh "msg"` = compress new audio → rebuild `feed.xml` → commit → push. CI (`.github/workflows/build.yml`) does the same on push as safety net.
 
-- Episodes: `episodes/<Name>.m4a` + sidecar `<Name>.json` (`{"title": "...", "description": "..."}`). Always add a sidecar with a proper title (underscores → spaces is the fallback, punctuation gets lost).
-- Feed order = git add-date of the audio file, newest first.
+- Episodes: `episodes/<Name>.mp3` (drop `.m4a`/`.wav`/`.mp3`; `compress.py` converts to 96k MP3 and deletes the source — MP3 because YouTube RSS ingestion rejects M4A) + sidecar `<Name>.json` (`{"title": "...", "description": "..."}`). Always add a sidecar with a proper title (underscores → spaces is the fallback, punctuation gets lost).
+- Feed order = git add-date of the audio file (legacy `.m4a` path checked too), newest first. GUID = filename stem.
 - Config: `config.json` (title, author, description, base_url, cover).
 - Show cover: `cover.jpg` (3000×3000). Source is `cover.source.html` — render with headless Chrome:
   `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=8000 --window-size=3000,3000 --screenshot=out.png file://$PWD/cover.source.html` then `sips -s format jpeg -s formatOptions 92 out.png --out cover.jpg`.
