@@ -21,6 +21,15 @@
       <link>https://b14r.github.io/podcasts</link>
     </image>
     <item>
+      <title>The Battle of Covadonga, 722</title>
+      <description>In a mountain valley of Asturias, Pelayo and a band of Christian holdouts turn back an Umayyad army, and the long reconquest of Iberia begins.</description>
+      <enclosure url="https://b14r.github.io/podcasts/episodes/How_Covadonga_Sparked_the_Reconquista.mp3" length="27794304" type="audio/mpeg"/>
+      <guid isPermaLink="false">How_Covadonga_Sparked_the_Reconquista</guid>
+      <pubDate>Wed, 11 Nov 2026 10:42:21 +0000</pubDate>
+      <itunes:duration>38:36</itunes:duration>
+      <itunes:image href="https://b14r.github.io/podcasts/episodes/How_Covadonga_Sparked_the_Reconquista.jpg?v=3c0f8d04"/>
+    </item>
+    <item>
       <title>The Battle of Lepanto, 1571</title>
       <enclosure url="https://b14r.github.io/podcasts/episodes/Shattering_Ottoman_Invincibility_at_Lepanto.mp3" length="34352084" type="audio/mpeg"/>
       <guid isPermaLink="false">Shattering_Ottoman_Invincibility_at_Lepanto</guid>
